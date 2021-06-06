@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackgroundColor"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="328dp"
+        android:layout_height="334dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="80dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circle"
+        android:rotation="180"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="50" />
+
+    <TextView
+        android:id="@+id/decibelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp"
+        android:fontFamily="sans-serif-light"
+        android:text="30.000dB"
+        android:textColor="#ffffff"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar"
+        tools:ignore="InvalidId" />
+
+    <TextView
+        android:id="@+id/maxDecibelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="290dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Max: 30dB"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decibelText"
+        tools:ignore="InvalidId,MissingConstraints" />
+
+</RelativeLayout>
